@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 
-export const PropsAndState = ({ yourName, day }) => {
+export const PropsAndState = ({ myUser, day }) => {
     let [countClicks, setCountClicks] = useState(0)
 
     const handleClick = () => {
@@ -12,7 +12,7 @@ export const PropsAndState = ({ yourName, day }) => {
 
   return (
     <>
-      <h3>Welcome, {yourName} </h3>
+      <h3>Welcome, {myUser.name}, and {myUser.pet} </h3>
       <p>Today is {day}</p>
 
       <p>{countClicks}</p>

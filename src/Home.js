@@ -1,13 +1,13 @@
 import React from "react";
 import { PropsAndState } from './components/PropsAndState'
 
+
 export const Home = ({isAdmin, myUser}) => (
     <>
         {isAdmin
         ? <p>You are an admin</p>
         : <p>You are NOT an admin</p>
         }
-
         <h2>Nashville Kennels</h2>
         <small>Loving care when you're not there.</small>
 

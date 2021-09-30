@@ -1,5 +1,6 @@
 import React from "react";
 import { PropsAndState } from './components/PropsAndState'
+import newQuote from './components/quote/QuoteCard'
 
 
 export const Home = ({isAdmin, myUser}) => (

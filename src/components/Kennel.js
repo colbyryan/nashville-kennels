@@ -7,7 +7,7 @@ const isAdmin = true;
 
 const myUser = {
     name:"Colby",
-    pet:"Dog"
+    pet:"Buddy"
 }
 
 export const Kennel = () => {

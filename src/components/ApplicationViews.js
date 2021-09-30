@@ -5,12 +5,15 @@ import { AnimalList } from "./animal/AnimalList"
 import { CustomerCard } from "./Customers/Customer"
 import { EmployeeCard } from "./Employees/Employee"
 import { LocationCard } from "./Locations/Location"
+import { QuoteList } from "./quote/QuoteList"
+
 
 export const ApplicationViews = ( {isAdmin, myUser} ) => {
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
             <Route exact path="/">
+              <QuoteList />
                 <Home isAdmin={isAdmin} myUser={myUser}/>
             </Route>
 

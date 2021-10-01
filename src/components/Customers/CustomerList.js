@@ -1,24 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CustomerCard } from "./Customer";
-import { getAllCustomers } from '../../modules/CustomerManager'
+import { getAllCustomers, removeCustomer } from '../../modules/CustomerManager'
 
 
 export const CustomerList = () => {
-    cosnt [customers, setCustomers] = useState([])
+    const [customers, setCustomers] = useState([]);
     const getCustomers = () => {
         return getAllCustomers().then(customersFromAPI => {
             setCustomers(customersFromAPI)
         });
     };
 
+    const handleDelteCustomer = id => {
+        removeCustomer(id)
+            .then(() => getAllCustomers().then(setCustomers))
+    }
+    useEffect(() => {
+        getCustomers();
+    }, []);
 
-useEffect(() => {
-    getCustomers();
-}, []);
-
-return (
-    <div className="container-cards">
-        {customers.map(customer => <CustomerCard key={customer.id} customer={customer}/>)}
-    </div>
-)
+    return (
+        <div className="container-cards">
+            {customers.map(customer => <CustomerCard key={customer.id} customer={customer} handleDelteCustomer={handleDelteCustomer} />)}
+        </div>
+    );
 };

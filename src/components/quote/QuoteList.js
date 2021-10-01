@@ -12,10 +12,7 @@ export const QuoteList = () => {
             setQuotes(quotesFromAPI)
         })
     }
-    const handleNewQuote = () => {
-        let newQuote = <QuoteCard quote={quotes[Math.floor(Math.random() * quotes.length)]} />
-        return newQuote
-    }
+
     useEffect(() => {
         getQuotes();
     }, []);
@@ -23,7 +20,6 @@ export const QuoteList = () => {
     return (
         <div className="quote-card">
             {quotes.length > 0 ? <QuoteCard quote={quotes[Math.floor(Math.random() * quotes.length)]} /> : <p>There are no quotes.</p>}
-            <button className="random-quote" onClick={handleNewQuote()}>New Quote</button>
         </div>
     )
 };

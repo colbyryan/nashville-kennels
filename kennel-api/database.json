@@ -2,47 +2,56 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
+      "name": "doodles",
       "breed": "Poodle",
       "locationId": 1,
-      "customerId":1
+      "customerId": 1
     },
     {
       "id": 2,
       "name": "Doodles",
       "breed": "Poodle",
       "locationId": 1,
-      "customerId":1
+      "customerId": 1
     },
     {
       "id": 3,
       "name": "Doodles",
       "breed": "Poodle",
       "locationId": 1,
-      "customerId":1
+      "customerId": 1
+    },
+    {
+      "name": "Docker",
+      "breed": "Golden Retreiver",
+      "locationId": 1,
+      "customerId": 2,
+      "id": 4
     }
   ],
   "customers": [
     {
       "id": 1,
       "name": "Hannah Hall",
-      "address": "7002 Chestnut Ct"
+      "address": "7002 Chestnut Ct",
+      "email": "email@email.com"
     },
     {
       "id": 2,
       "name": "Colby Ryan",
-      "address": "123 Street Road"
+      "address": "123 Street Road",
+      "email": "email@email.com"
     }
   ],
   "employees": [
     {
       "id": 1,
-      "name":"Colby Ryan",
+      "name": "Colby Ryan",
       "positon": "Groomer"
     },
     {
       "id": 2,
-      "name":"Brady Williams",
+      "name": "Brady Williams",
       "positon": "Groomer"
     }
   ],
